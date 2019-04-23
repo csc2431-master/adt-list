@@ -1,19 +1,27 @@
-# Implementation of Abstract Data Type List: Variable Size Array List
+# Implementation of Abstract Data Type List: Double Linked List
 
 ## Purpose
-The goal of this lab is to implement class VSArray.
+The goal of this lab is to implement class DLinkedList.
 
 ## Design
-Class `VSArray` is a subclass of `List`, and it implements all virtual
-pure methods from class `List`. The difference between this class and 
-FSArrayList is that this class allows the array to grow if `_size == _capacity`.
-
-You are expected to grow the size of the array by 50% just like it was
-discussed in class.
+Class `DLinkedList` is a subclass of `List`, and it implements all virtual
+pure methods from class `List`. Remember that this class uses nodes that have a pointer
+to the next and previous links on the list:
+```
+struct Node{
+  Object* data;
+  Node* next;
+  Node* prev;
+ };
+```
+Additionally, this class has a pointer to the last element of the list: `_tail`.
 
 ## What is given?
-The code for the abstract class `List`, the code for `FSArray`, the modified unit test,
-the makefile (if you wish to use it).
+- `dlinkedlist.h` the declaration of the class
+- `dlinkedlist.cpp` the method stubs ready for you to fill in the implementation of each method
+- `test.cpp` the modified Unit Test, this unit test will test all implementations, you are responsible of passing all 55 tests for variable array lists and all 55 tests for double linked lists. It is possible that you passed the tests from variable array list before and not now, make sure to pass them now.
+- Other classes, all classes discussed during the ADT List unit.
+
 
 ## What is expected?
 - Your code ***must*** compile.
